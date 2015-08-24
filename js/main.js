@@ -1,0 +1,2 @@
+console.log("%cI'm looking for a new challenge, are you hiring?", "font-size:large;color:blue;");
+console.log("%cMy name is Wayne Walrath - <wkw-AT-acmetech-DOT-com>", "font-style:italic;color:gray;");
