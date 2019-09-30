@@ -35,6 +35,20 @@
   .indent {
     margin-left: 15px;
   }
+
+  @page {
+    @bottom-right {
+      content: counter(page) " of " counter(pages);
+    }
+  }
+
+  @media print {
+    .hide-print {
+      display: none;
+    }
+
+    .pagebreak { page-break-before: always; } /* page-break-after works, as well */
+  }
 </style>
 
   </head>
@@ -49,7 +63,7 @@
             <h2>Wayne K. Walrath - Full Stack Developer</h2>
             <p class="contact">
               wkw@acmetech.com &bull;
-              Phoenicia, NY &bull; <a href="https://wkw.github.io/pdf/Wayne_Walrath_resume.pdf">pdf version</a>
+              301 Old Route 28, Phoenicia, NY 12464 <span class="hide-print">&bull;</span> <a class="hide-print" href="https://wkw.github.io/pdf/Wayne_Walrath_resume.pdf">pdf version</a>
             </p>
           </div>
         </div> <!-- .row -->
@@ -62,13 +76,13 @@
     <div class="container">
 
         <div class="row">
-          <div class="col-sm-12">
+          <div class="col-xs-12">
             <h3>Tools & Technologies</h3>
           </div>
         </div><!-- .row -->
 
         <div class="row">
-          <div class="col-sm-6">
+          <div class="col-xs-6">
             <ul>
               <li>Unix / MacOS / shell scripts</li>
               <li>AWS, Google Cloud Services</li>
@@ -86,7 +100,7 @@
             </ul>
           </div>
 
-          <div class="col-sm-6">
+          <div class="col-xs-6">
             <ul>
               <li>Export-level WordPress: theme/plugin dev, WP REST API, wp-cli</li>
               <li>Roots Bedrock and Sage Theme</li>
@@ -116,7 +130,6 @@
           </div>
       </div><!-- .row -->
     </div><!-- .container -->
-
 
       <!-- Jobs / Projects
           =========================================== -->
@@ -154,6 +167,7 @@
           	<li>Extensive data migration tasks.</li>
           </ul>
 
+    <div class="pagebreak"></div>
 
           <!-- ==== WORK:FREELANCE ==== -->
           <h4 class="no-marg-bot">Freelance - CT/NY</h4>
@@ -206,17 +220,16 @@
     <div class="container">
       <h4>Links</h4>
         <div class="row">
-          <div class="col-sm-4">
-            Stackoverflow:<br/> <a href="https://stackoverflow.com/users/161625/wkw"
-              target="ext">https://stackoverflow.com/users/161625/wkw</a>
-          </div>
-          <div class="col-sm-4">
-            Github:<br /> <a href="https://github.com/wkw" target="ext">https://github.com/wkw</a>
-          </div>
-          <div class="col-sm-4">
-            This Document:<br /> <a href="https://wkw.github.io" target="ext">https://wkw.github.io</a>
-          </div>
-
+          <div class="col-xs-12">
+            <dl class="indent">
+              <dt>StackOverflow:</dt>
+              <dd><a href="https://stackoverflow.com/users/161625/wkw"
+              target="ext"><code>https://stackoverflow.com/users/161625/wkw</code></a></dd>
+              <dt>Github:</dt>
+              <dd><a href="https://github.com/wkw" target="ext"><code>https://github.com/wkw</code></a></dd>
+              <dt>This Document:</dt>
+              <dd><a href="https://wkw.github.io" target="ext"><code>https://wkw.github.io</code></a></dd>
+          </dl>
       </div><!-- .row -->
     </div><!-- .container -->
 
